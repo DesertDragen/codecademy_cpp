@@ -40,6 +40,22 @@ std::string needs_water(int days, bool is_succulent) {
     }
 }
 
+// Palindrome -> Checks if text is a palindrome or not
+bool is_palindrome(std::string text) {
+    bool value;
+
+    for (int i = 0; i < text.size() / 2; i++) {
+        if (text[i] == text[text.size() - 1 - i]) {
+            value = true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    return value;
+}
+
 int main() {
     // Introductions
     introduction("Nora", "Nova");
@@ -59,4 +75,9 @@ int main() {
 
     // Figuring out when to water the plant
     std::cout << "Water the plant? " << needs_water(10, false);
+
+    // Is it a palindrome?
+    std::cout << "Is palindrome? " << is_palindrome("madam") << "\n";
+    std::cout << "Is palindrome? " << is_palindrome("amezaiku") << "\n";
+
 }
