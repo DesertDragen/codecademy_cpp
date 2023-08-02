@@ -24,15 +24,39 @@ std::vector<int> first_three_multiples(int num) {
     return multiples;
 }
 
+// Water the plant -> return the value of the if/elseif/else statements and the && operator
+std::string needs_water(int days, bool is_succulent) {
+    if (is_succulent == false && days > 3) {
+        return "Time to water the plant.\n";
+    }
+    else if (is_succulent == true && days <= 12) {
+        return "Don't water the plant!\n";
+    } 
+    else if (is_succulent == true && days >= 13) {
+        return "Go ahead and give the plant a little water.\n";
+    }
+    else {
+        return "Don't water the plant!\n";
+    }
+}
+
 int main() {
+    // Introductions
     introduction("Nora", "Nova");
 
+    // The average of two numbers
     std::cout << "The average is " << average(42.0, 24.0) << "\n";
 
+    // Calculating the number to the power of 10
     std::cout << tenth_power(2) << "\n";
 
+    // The first three multiples of a given number
     std::cout << "The first 3 multiples: ";
     for (int element : first_three_multiples(8)) {
         std::cout << element << " ";
     }
+    std::cout << "\n";
+
+    // Figuring out when to water the plant
+    std::cout << "Water the plant? " << needs_water(10, false);
 }
