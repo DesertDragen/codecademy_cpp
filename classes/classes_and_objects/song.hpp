@@ -8,6 +8,8 @@ class Song {
     public:
         // Constructor being set up to take in pre-defined values
         Song(std::string new_title, std::string new_artist);
+        // Deconstructor being set up to destroy the constructor
+        ~Song();
 
         void add_title(std::string new_title);
         std::string get_title();

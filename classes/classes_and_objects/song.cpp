@@ -1,9 +1,15 @@
+#include <iostream>
 #include "song.hpp"
 
 // Constructor being set with pre-defined values
 Song::Song(std::string new_title, std::string new_artist) {
     title = new_title;
     artist = new_artist;
+}
+
+// Deconstructor here to destroy the constructor
+Song::~Song() {
+    std::cout << "Goodbye " << title;
 }
 
 void Song::add_title(std::string new_title) {
