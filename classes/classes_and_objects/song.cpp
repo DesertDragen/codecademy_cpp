@@ -7,7 +7,7 @@ Song::Song(std::string new_title, std::string new_artist) {
     artist = new_artist;
 }
 
-// Deconstructor here to destroy the constructor
+// Deconstructor here to destroy the constructor abd does cleanup code
 Song::~Song() {
     std::cout << "Goodbye " << title;
 }
