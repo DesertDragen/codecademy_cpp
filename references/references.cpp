@@ -1,5 +1,6 @@
 #include <iostream>
 
+// References are aliases
 int main() {
     int soda = 99;
     // Making pop a reference of soda (pop == soda)
