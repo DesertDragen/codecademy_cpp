@@ -5,6 +5,7 @@ int main() {
     // Making pop a reference of soda (pop == soda)
     int &pop = soda;
 
+    // Increment pop, since pop ir a reference of soda, soda wil increment too
     pop++;
 
     std::cout << soda << "\n";
